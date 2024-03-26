@@ -1,3 +1,8 @@
 # dotfiles
 
-Some of my configs 
+Ansible playbook to setup fish and aliases
+
+```bash
+apt install ansible
+ansible-playbook setup.yml
+```

@@ -1,0 +1,25 @@
+---
+- hosts: localhost
+  vars:
+    ansible_user: $USERNAME
+  become: true
+
+  tasks:
+
+    - name: Install fish
+      apt:
+        name: fish
+        state: present
+
+    - name: Set fish as default shell
+      shell: chsh -s /usr/bin/fish {{ ansible_user }}
+
+    - name: Copy fish aliases
+      copy:
+        src: aliases/.
+        dest: ~/.config/fish/functions/
+
+    - name: Install git
+      apt:
+        name: git
+        state: present
