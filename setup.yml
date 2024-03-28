@@ -1,15 +1,23 @@
----
 - hosts: localhost
   vars:
     ansible_user: $USERNAME
+    packages:
+      - build-essential
+      - bash
+      - fish
+      - curl
+      - docker
+      - docker-compose
+
   become: true
 
   tasks:
 
-    - name: Install fish
+    - name: Install packages
       apt:
-        name: fish
+        name: "{{ item }}"
         state: present
+      with_items: "{{ packages }}"
 
     - name: Set fish as default shell
       shell: chsh -s /usr/bin/fish {{ ansible_user }}
@@ -17,9 +25,4 @@
     - name: Copy fish aliases
       copy:
         src: aliases/.
-        dest: ~/.config/fish/functions/
-
-    - name: Install git
-      apt:
-        name: git
-        state: present
+        dest: $HOME/.config/fish/functions/
