@@ -21,14 +21,15 @@ return {
 
       local lspconfig = require("lspconfig")
 
-      local on_attach = function(client, bufnr)
-        if client.name == "ruff_lsp" then
-          -- Disable hover in favor of Pyright
-          client.server_capabilities.hoverProvider = false
-        end
-      end
+      -- disabled till I figure it out how to correcctly configure it
+      --local on_attach = function(client, bufnr)
+      --if client.name == "ruff_lsp" then
+      ---- Disable hover in favor of Pyright
+      --client.server_capabilities.hoverProvider = false
+      --end
+      --end
       require("lspconfig").ruff_lsp.setup({
-        on_attach = on_attach,
+        --	on_attach = on_attach,
         init_options = {
           settings = {
             -- Any extra CLI arguments for `ruff` go here.
