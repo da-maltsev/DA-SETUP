@@ -17,3 +17,4 @@ sudo pacman -S git >/dev/null
 
 echo "Installation starting..."
 source ~/.local/share/da-files/install.sh
+echo "Installation finished. Logout or reboot to see all changes..."
