@@ -3,7 +3,7 @@ gsettings set org.gnome.desktop.screensaver lock-enabled false
 gsettings set org.gnome.desktop.session idle-delay 0
 
 # Run desktop installers
-yay -S google-chrome localsend telegram-desktop \
+yay -S google-chrome telegram-desktop \
   vlc yandex-music sushi gnome-tweaks wl-clipboard \
   bitwarden steam zed vscode
 
