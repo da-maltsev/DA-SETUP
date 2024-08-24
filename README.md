@@ -1,8 +1,8 @@
 # DA SETUP
 
-My humble setup for fresh [EOS with GNOME](https://endeavouros.com/) highly inspired by DHH's [Omakub](https://github.com/basecamp/omakub/tree/master)
+My humble setup for fresh [EOS with GNOME](https://endeavouros.com/) is strongly inspired by DHH's [Omakub](https://github.com/basecamp/omakub/tree/master)
 
-<details><summary>other distros</summary>probably will work on other Arch-based distros with gnome and yay too
+<details><summary>other distros</summary>probably gonna work on other Arch-based distros with gnome and yay
 </details>
 
 ### To set everything up:
@@ -16,9 +16,9 @@ chmod +x boot.sh
 
 ### What's inside
 
-- [fish](https://fishshell.com/) shell with bunch of [aliases](https://github.com/da-maltsev/da-files/tree/master/configs/fish/functions)
+- [fish](https://fishshell.com/) shell with a bunch of [aliases](https://github.com/da-maltsev/da-files/tree/master/configs/fish/functions)
 - [zellij](https://zellij.dev/) as terminal multiplexer
 - [kitty](https://sw.kovidgoyal.net/kitty/) as main terminal
 - [neovim](https://neovim.io/) with [lazyvim](https://www.lazyvim.org/) base setup
 - [mise](https://mise.jdx.dev/dev-tools/) for simple dev tools management
-- some gnome extensions for better GNOME experience (tiling, keyboard navigation, etc) see [hotkeys](https://github.com/da-maltsev/da-files/blob/master/install/desktop/gnome-hotkeys.sh)
+- some gnome extensions for better GNOME experience (tiling, keyboard navigation, etc.) see [hotkeys](https://github.com/da-maltsev/da-files/blob/master/install/desktop/gnome-hotkeys.sh)
