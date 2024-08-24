@@ -2,7 +2,7 @@
 
 My humble setup for fresh [EOS with GNOME](https://endeavouros.com/) highly inspired by DHH's [Omakub](https://github.com/basecamp/omakub/tree/master)
 
-<details><summary>other distros</summary>probably will work on other Arch-based distros with gnome and yay too)
+<details><summary>other distros</summary>probably will work on other Arch-based distros with gnome and yay too
 </details>
 
 ### To set everything up:
