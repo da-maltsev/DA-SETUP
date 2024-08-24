@@ -17,7 +17,7 @@ chmod +x boot.sh
 ### What's inside
 
 - [fish](https://fishshell.com/) shell with a bunch of [aliases](https://github.com/da-maltsev/da-files/tree/master/configs/fish/functions)
-- [zellij](https://zellij.dev/) as terminal multiplexer
+- [zellij](https://zellij.dev/about/) as terminal multiplexer
 - [kitty](https://sw.kovidgoyal.net/kitty/) as main terminal
 - [neovim](https://neovim.io/) with [lazyvim](https://www.lazyvim.org/) base setup
 - [mise](https://mise.jdx.dev/dev-tools/) for simple dev tools management
