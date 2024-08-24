@@ -15,9 +15,5 @@ echo -e "\nBegin installation (or abort with ctrl+c)..."
 sudo pacman -Syu >/dev/null
 sudo pacman -S git >/dev/null
 
-echo "Cloning da-files..."
-rm -rf ~/.local/share/da-files
-git clone https://github.com/da-maltsev/da-files.git ~/.local/share/da-files >/dev/null
-
 echo "Installation starting..."
 source ~/.local/share/da-files/install.sh

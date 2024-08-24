@@ -5,5 +5,8 @@ Works great on EndeavourOS with Gnome (probably will work on other Arch-based di
 
 To set everything up just do:
 ```bash
-https://github.com/da-maltsev/dotfiles install | bash
+git clone --depth=1 https://github.com/da-maltsev/da-files.git ~/.local/share/da-files
+cd ~/.local/share/da-files
+chmod +x boot.sh
+./boot.sh
 ```
