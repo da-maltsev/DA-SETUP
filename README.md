@@ -1,6 +1,6 @@
 # DA SETUP
 
-My humble setup for fresh [EOS with GNOME](https://endeavouros.com/) is strongly inspired by DHH's [Omakub](https://github.com/basecamp/omakub/tree/master)
+My humble setup for fresh [EOS with GNOME](https://endeavouros.com/) strongly inspired by DHH's [Omakub](https://github.com/basecamp/omakub/tree/master)
 
 <details><summary>other distros</summary>probably gonna work on other Arch-based distros with gnome and yay
 </details>
