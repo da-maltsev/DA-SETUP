@@ -8,7 +8,7 @@ My humble setup for fresh [EOS with GNOME](https://endeavouros.com/) highly insp
 ### To set everything up:
 
 ```bash
-git clone --depth=1 https://github.com/da-maltsev/da-files.git ~/.local/share/da-files
+git clone --depth=1 https://github.com/da-maltsev/da-setup.git ~/.local/share/da-files
 cd ~/.local/share/da-files
 chmod +x boot.sh
 ./boot.sh
