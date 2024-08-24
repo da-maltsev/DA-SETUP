@@ -1,12 +1,24 @@
-# DA-files
+# DA SETUP
 
-My humble setup highly inspired by DHH's Omakub.
-Works great on EndeavourOS with Gnome (probably will work on other Arch-based distros with gnome too)
+My humble setup for fresh [EOS with GNOME](https://endeavouros.com/) highly inspired by DHH's [Omakub](https://github.com/basecamp/omakub/tree/master)
 
-To set everything up just do:
+<details><summary>other distros</summary>probably will work on other Arch-based distros with gnome and yay too)
+</details>
+
+### To set everything up:
+
 ```bash
 git clone --depth=1 https://github.com/da-maltsev/da-files.git ~/.local/share/da-files
 cd ~/.local/share/da-files
 chmod +x boot.sh
 ./boot.sh
 ```
+
+### What's inside
+
+- [fish](https://fishshell.com/) shell with bunch of [aliases](https://github.com/da-maltsev/da-files/tree/master/configs/fish/functions)
+- [zellij](https://zellij.dev/) as terminal multiplexer
+- [kitty](https://sw.kovidgoyal.net/kitty/) as main terminal
+- [neovim](https://neovim.io/) with [lazyvim](https://www.lazyvim.org/) base setup
+- [mise](https://mise.jdx.dev/dev-tools/) for simple dev tools management
+- some gnome extensions for better GNOME experience (tiling, keyboard navigation, etc) see [hotkeys](https://github.com/da-maltsev/da-files/blob/master/install/desktop/gnome-hotkeys.sh)
