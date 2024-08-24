@@ -1,6 +1,7 @@
 yay -S python-pipx extension-manager
 pipx ensurepath
-pipx install gnome-extensions-cli --system-site-packages --force-reinstall
+source ~/.bashrc
+pipx install gnome-extensions-cli --system-site-packages --force
 
 # Install new extensions
 gext install tactile@lundal.io

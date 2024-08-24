@@ -1,7 +1,7 @@
 yay -Syu
 yay -S base-devel clang curl git unzip fish docker fzf ripgrep \
-  bat eza zoxide plocate btop apache2-utils openvpn \
-  fd-find tldr fastfetch lazydocker lazygit mise
+  bat eza zoxide plocate btop openvpn \
+  tldr fastfetch lazydocker lazygit mise
 
 chsh -s /usr/bin/fish $USER
 
