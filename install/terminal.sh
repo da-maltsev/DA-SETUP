@@ -1,5 +1,5 @@
 yay -Syu
-yay -S base-devel clang curl git unzip fish docker fzf ripgrep \
+yay -S base-devel clang curl unzip fish docker fzf ripgrep \
   bat eza zoxide plocate btop openvpn \
   tldr fastfetch lazydocker lazygi
 
