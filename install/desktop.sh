@@ -1,5 +1,5 @@
 # Run desktop installers
-yay -S google-chrome telegram-desktop \
+yay -S google-chrome telegram-desktop zen-browser \
   vlc yandex-music sushi gnome-tweaks wl-clipboard \
   bitwarden steam zed vscode clutter
 
