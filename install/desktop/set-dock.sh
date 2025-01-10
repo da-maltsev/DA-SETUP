@@ -1,6 +1,6 @@
 # Favorite apps for dock
 apps=(
-  "kitty.desktop"
+  "com.mitchellh.ghostty.desktop"
   "google-chrome.desktop"
   "org.telegram.desktop.desktop"
   "yandex-music.desktop"
