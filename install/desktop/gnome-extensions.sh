@@ -1,7 +1,8 @@
-yay -S python-pipx extension-manager
-pipx ensurepath
+sudo dnf install -y uv 
+sudo flatpak install flathub com.mattjakeman.ExtensionManager
+
 source ~/.bashrc
-pipx install gnome-extensions-cli --system-site-packages --force
+uv tool install gnome-extensions-cli
 
 # Install new extensions
 gext install tactile@lundal.io

@@ -1,7 +1,7 @@
-yay -Syu
-yay -S base-devel clang curl unzip fish docker fzf ripgrep \
+sudo dnf update -y
+sudo dnf install -y @development-tools clang curl unzip fish docker fzf ripgrep \
   bat eza zoxide plocate btop openvpn \
-  tldr fastfetch lazydocker lazygi
+  tldr fastfetch
 
 chsh -s /usr/bin/fish $USER
 

@@ -2,9 +2,6 @@
 apps=(
   "com.mitchellh.ghostty.desktop"
   "google-chrome.desktop"
-  "org.telegram.desktop.desktop"
-  "yandex-music.desktop"
-  "steam.desktop"
   "org.gnome.Settings.desktop"
   "org.gnome.Nautilus.desktop"
 )
