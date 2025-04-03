@@ -1,8 +1,8 @@
 # DA SETUP
 
-My humble setup for fresh [EOS with GNOME](https://endeavouros.com/) strongly inspired by DHH's [Omakub](https://github.com/basecamp/omakub/tree/master)
+My humble setup for fresh [Fedora Workstation](https://fedoraproject.org/workstation/) strongly inspired by DHH's [Omakub](https://github.com/basecamp/omakub/tree/master)
 
-<details><summary>other distros</summary>probably gonna work on other Arch-based distros with gnome and yay
+<details><summary>other distros</summary>probably gonna work on other Linux distributions with GNOME desktop environment and DNF package manager
 </details>
 
 ### To set everything up:

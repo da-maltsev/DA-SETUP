@@ -12,8 +12,8 @@ ________      _____                           __
 echo -e "$ascii_art"
 echo -e "\nBegin installation (or abort with ctrl+c)..."
 
-sudo pacman -Syu >/dev/null
-sudo pacman -S git >/dev/null
+sudo dnf update -y >/dev/null
+sudo dnf install -y git >/dev/null
 
 echo "Installation starting..."
 source ~/.local/share/da-files/install.sh
