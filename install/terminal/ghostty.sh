@@ -1,5 +1,5 @@
-dnf copr enable pgdev/ghostty
-dnf install -y ghostty
+sudo dnf copr enable pgdev/ghostty
+sudo dnf install -y ghostty
 
 
 mkdir -p ~/.config/ghostty/
