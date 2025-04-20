@@ -1,7 +1,7 @@
 sudo dnf update -y
 sudo dnf install -y @development-tools clang curl unzip fish docker fzf ripgrep \
   bat eza zoxide plocate btop openvpn \
-  tldr fastfetch
+  tldr fastfetch neovim
 
 chsh -s /usr/bin/fish $USER
 
