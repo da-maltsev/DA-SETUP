@@ -1,4 +1,6 @@
-# DA SETUP
+#  I GOT DEEP IN [OMARCHY](https://github.com/basecamp/omarchy) (SO THIS REPO WILL BE JSUT MY DOTFILES)
+
+## DA SETUP
 
 My humble setup for fresh [Fedora Workstation](https://fedoraproject.org/workstation/) strongly inspired by DHH's [Omakub](https://github.com/basecamp/omakub/tree/master)
 
