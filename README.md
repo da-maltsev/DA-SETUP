@@ -1,4 +1,6 @@
-#  I GOT DEEP IN [OMARCHY](https://github.com/basecamp/omarchy) (SO THIS REPO WILL BE JSUT MY DOTFILES)
+# I GOT DEEP IN [OMARCHY](https://github.com/basecamp/omarchy) (SO THIS REPO WILL BE JUST MY DOTFILES)
+
+# It still works for Fedora but in next update I'll remove all non-dotfiles stuff.
 
 ## DA SETUP
 
