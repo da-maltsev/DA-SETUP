@@ -13,6 +13,19 @@ jobs:
           for f in $(find . -name "*.sh" -not -path "./.git/*"); do
             bash -n "$f"
           done
+      - name: Verify setup.sh symlink
+        run: |
+          if [ ! -L site/setup.sh ]; then
+            echo "❌ site/setup.sh must be a symlink"
+            exit 1
+          fi
+          target=$(readlink site/setup.sh)
+          expected="../bootstrap.sh"
+          if [ "$target" != "$expected" ]; then
+            echo "❌ site/setup.sh points to $target, expected $expected"
+            exit 1
+          fi
+          echo "✅ site/setup.sh -> $target"
 
   test-setup:
     needs: syntax-check
