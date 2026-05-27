@@ -1,27 +1,30 @@
-# I GOT DEEP IN [OMARCHY](https://github.com/basecamp/omarchy) (SO THIS REPO WILL BE JUST MY DOTFILES)
+# DA SETUP
 
-# It still works for Fedora but in next update I'll remove all non-dotfiles stuff.
+My macOS setup inspired by DHH's [Omakub](https://github.com/basecamp/omakub).
 
-## DA SETUP
-
-My humble setup for fresh [Fedora Workstation](https://fedoraproject.org/workstation/) strongly inspired by DHH's [Omakub](https://github.com/basecamp/omakub/tree/master)
-
-<details><summary>other distros</summary>probably gonna work on other Linux distributions with GNOME desktop environment and DNF package manager
-</details>
-
-### To set everything up:
+## One-command setup
 
 ```bash
-git clone --depth=1 https://github.com/da-maltsev/da-setup.git ~/.local/share/da-files
-cd ~/.local/share/da-files
-chmod +x boot.sh
-./boot.sh
+git clone --depth=1 https://github.com/da-maltsev/da-setup.git ~/.local/share/da-files && ~/.local/share/da-files/bootstrap.sh
 ```
 
-### What's inside
+## What's inside
 
-- [fish](https://fishshell.com/) shell with a bunch of [aliases](https://github.com/da-maltsev/da-files/tree/master/configs/fish/functions)
-- [ghostty](https://ghostty.org/) as main terminal
-- [neovim](https://neovim.io/) with [lazyvim](https://www.lazyvim.org/) base setup
-- [mise](https://mise.jdx.dev/dev-tools/) for simple dev tools management
-- some gnome extensions for better GNOME experience (tiling, keyboard navigation, etc.) see [hotkeys](https://github.com/da-maltsev/da-files/blob/master/install/desktop/gnome-hotkeys.sh)
+- **Shell**: zsh with aliases (git shortcuts, eza, nvim, podman, etc.)
+- **Terminal**: Ghostty with macOS-native keybindings and 75% opacity
+- **Editor**: Neovim with LazyVim, Catppuccin theme, Python extras
+- **Prompt**: Starship with Catppuccin Mocha theme
+- **Python**: uv package manager
+- **Container**: Podman with Rosetta for Apple Silicon
+- **CLI tools**: fzf, ripgrep, bat, eza, btop, tldr, lazygit, fastfetch
+- **Font**: JetBrains Mono Nerd Font
+- **Apps**: Brave Browser, 1Password (with CLI), Telegram, Cursor
+- **Other**: Opencode CLI
+
+## macOS defaults applied
+
+- Fast key repeat (no press-and-hold)
+- Tap to click and three finger drag
+- Show hidden files, path bar, and status bar in Finder
+- Screenshots saved to ~/Downloads
+- Expanded save/print dialogs by default

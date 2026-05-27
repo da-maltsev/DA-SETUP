@@ -1,3 +1,4 @@
+#!/bin/bash
 set -e
 
 ascii_art='
@@ -10,11 +11,18 @@ ________      _____                           __
 '
 
 echo -e "$ascii_art"
-echo -e "\nBegin installation (or abort with ctrl+c)..."
+echo -e "\nBeginning macOS setup (or abort with ctrl+c)..."
 
-sudo dnf update -y >/dev/null
-sudo dnf install -y git >/dev/null
+if [ "$(uname)" != "Darwin" ]; then
+  echo "This script is for macOS only."
+  exit 1
+fi
+
+if ! xcode-select -p &>/dev/null; then
+  echo "Installing Xcode Command Line Tools..."
+  xcode-select --install
+fi
 
 echo "Installation starting..."
 source ~/.local/share/da-files/install.sh
-echo "Installation finished. Logout or reboot to see all changes..."
+echo "Installation finished. Restart your terminal to see all changes."

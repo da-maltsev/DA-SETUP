@@ -1,13 +1,19 @@
-sudo dnf update -y
-sudo dnf install -y @development-tools clang curl unzip fish docker fzf ripgrep \
-  bat eza zoxide plocate btop openvpn \
-  tldr fastfetch neovim
+set -e
 
-chsh -s /usr/bin/fish $USER
+source ~/.local/share/da-files/install/terminal/homebrew.sh
 
-# Run terminal installers
-for installer in ~/.local/share/da-files/install/terminal/*.sh; do source $installer; done
+brew install fzf ripgrep bat eza btop tldr fastfetch neovim
 
-mkdir -p ~/.config/fish/functions
-cp ~/.local/share/da-files/configs/fish/config.fish ~/.config/fish/config.fish
-cp -r ~/.local/share/da-files/configs/fish/functions/. ~/.config/fish/functions/
+source ~/.local/share/da-files/install/terminal/fonts.sh
+source ~/.local/share/da-files/install/terminal/ghostty.sh
+source ~/.local/share/da-files/install/terminal/uv.sh
+source ~/.local/share/da-files/install/terminal/podman.sh
+source ~/.local/share/da-files/install/terminal/lazygit.sh
+source ~/.local/share/da-files/install/terminal/opencode.sh
+source ~/.local/share/da-files/install/terminal/starship.sh
+source ~/.local/share/da-files/install/terminal/fastfetch.sh
+source ~/.local/share/da-files/install/terminal/neovim.sh
+
+mkdir -p ~/.config/zsh
+cp ~/.local/share/da-files/configs/zsh/aliases.zsh ~/.config/zsh/aliases.zsh
+cp ~/.local/share/da-files/configs/zsh/.zshrc ~/.zshrc
