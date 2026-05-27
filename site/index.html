@@ -136,19 +136,18 @@
 <div class="container">
 
 <pre class="art">
-________      _____                           __
-\______ \    /  _  \             ______ _____/  |_ __ ________
- |    |  \  /  /_\  \   ______  /  ___// __ \   __\  |  \____ \
- |    `   \/    |    \ /_____/  \___ \\  ___/|  | |  |  /  |_> >
-/_______  /\____|__  /         /____  >\___  >__| |____/|   __/
-        \/         \/               \/     \/           |__|
+    ____  ___       _____ ______________  ______
+   / __ \/   |     / ___// ____/_  __/ / / / __ \
+  / / / / /| |     \__ \/ __/   / / / / / / /_/ /
+ / /_/ / ___ |    ___/ / /___  / / / /_/ / ____/
+/_____/_/  |_|   /____/_____/ /_/  \____/_/
 </pre>
 
 <h1>DA SETUP</h1>
 <p class="subtitle">macOS setup by <a href="https://github.com/da-maltsev/da-setup" style="color:var(--blue);text-decoration:none;">da-maltsev</a></p>
 
 <div class="cmd-box">
-  <code id="cmd">git clone --depth=1 https://github.com/da-maltsev/da-setup.git ~/.local/share/da-files && ~/.local/share/da-files/bootstrap.sh</code>
+  <code id="cmd">curl -fsSL <span id="setup-url"></span> | bash</code>
   <button id="copy-btn" onclick="copyCmd()">Copy</button>
 </div>
 
@@ -193,18 +192,26 @@ ________      _____                           __
 </div>
 
 <script>
+function buildCmd() {
+  var url = window.location.origin + '/setup.sh';
+  document.getElementById('setup-url').textContent = url;
+}
+
 function copyCmd() {
-  const cmd = document.getElementById('cmd').textContent;
-  const btn = document.getElementById('copy-btn');
-  navigator.clipboard.writeText(cmd).then(() => {
+  var url = window.location.origin + '/setup.sh';
+  var cmd = 'curl -fsSL ' + url + ' | bash';
+  var btn = document.getElementById('copy-btn');
+  navigator.clipboard.writeText(cmd).then(function () {
     btn.textContent = 'Copied!';
     btn.classList.add('copied');
-    setTimeout(() => {
+    setTimeout(function () {
       btn.textContent = 'Copy';
       btn.classList.remove('copied');
     }, 2000);
   });
 }
+
+buildCmd();
 </script>
 </body>
 </html>
