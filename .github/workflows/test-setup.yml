@@ -2,8 +2,6 @@ name: Test macOS setup
 on:
   push:
     branches: [master, macos]
-  pull_request:
-    branches: [master]
 
 jobs:
   syntax-check:
