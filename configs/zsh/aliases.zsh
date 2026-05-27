@@ -35,11 +35,23 @@ function gl1 {
 }
 
 function leave_md {
-  git checkout develop
-  git branch --list | grep -v 'develop\|main\|master' | xargs git branch -D
+  local target=""
+  for branch in develop main master; do
+    if git show-ref --verify --quiet refs/heads/$branch; then
+      target=$branch
+      break
+    fi
+  done
+  if [ -n "$target" ]; then
+    git checkout $target
+    git branch --list | grep -v "develop\|main\|master" | xargs git branch -D
+  else
+    echo "No develop, main, or master branch found."
+  fi
 }
 
 alias dc='podman compose'
+alias docker='podman'
 alias lg='lazygit'
 
 alias ls='eza --icons --group-directories-first'
@@ -49,15 +61,8 @@ alias lta='eza --tree --level=2 --long --icons --git -a'
 
 alias n='nvim'
 
-function venv {
+function vvv {
   source .venv/bin/activate
 }
 
-function do_dirs {
-  for dir in */; do
-    if [ -d "$dir" ]; then
-      echo "=== $dir ==="
-      (cd "$dir" && "$@")
-    fi
-  done
-}
+
