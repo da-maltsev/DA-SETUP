@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DA SETUP</title>
+<style>
+  :root {
+    --bg: #1e1e2e;
+    --surface: #313244;
+    --text: #cdd6f4;
+    --subtext: #a6adc8;
+    --blue: #89b4fa;
+    --green: #a6e3a1;
+    --peach: #fab387;
+    --mantle: #181825;
+    --crust: #11111b;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'SF Mono', 'Menlo', 'Monaco', 'Cascadia Code', 'JetBrains Mono', monospace;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1rem;
+  }
+
+  .container {
+    max-width: 720px;
+    width: 100%;
+  }
+
+  pre.art {
+    font-size: clamp(0.4rem, 1.5vw, 0.65rem);
+    line-height: 1.1;
+    color: var(--peach);
+    margin-bottom: 0.5rem;
+    white-space: pre;
+    overflow-x: auto;
+  }
+
+  h1 {
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    font-weight: 700;
+    color: var(--blue);
+    margin-bottom: 0.25rem;
+  }
+
+  .subtitle {
+    color: var(--subtext);
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+  }
+
+  .cmd-box {
+    background: var(--mantle);
+    border: 1px solid var(--surface);
+    border-radius: 10px;
+    padding: 1.25rem;
+    margin-bottom: 2rem;
+    position: relative;
+  }
+
+  .cmd-box code {
+    display: block;
+    font-size: clamp(0.7rem, 1.8vw, 0.85rem);
+    line-height: 1.5;
+    word-break: break-all;
+    white-space: pre-wrap;
+    padding-right: 3.5rem;
+    color: var(--green);
+  }
+
+  .cmd-box button {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: var(--surface);
+    color: var(--text);
+    border: 1px solid transparent;
+    border-radius: 6px;
+    padding: 0.35rem 0.65rem;
+    font-size: 0.75rem;
+    font-family: inherit;
+    cursor: pointer;
+    transition: background 0.15s, border-color 0.15s;
+  }
+
+  .cmd-box button:hover { background: #45475a; border-color: var(--blue); }
+  .cmd-box button.copied { border-color: var(--green); color: var(--green); }
+
+  .section-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--blue);
+    margin-bottom: 0.75rem;
+    margin-top: 1.5rem;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 0.5rem;
+    list-style: none;
+  }
+
+  .grid li {
+    background: var(--surface);
+    border-radius: 6px;
+    padding: 0.4rem 0.7rem;
+    font-size: 0.82rem;
+  }
+
+  .grid li span { color: var(--subtext); }
+
+  .footer {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--surface);
+    text-align: center;
+    font-size: 0.78rem;
+    color: var(--subtext);
+  }
+
+  .footer a { color: var(--blue); text-decoration: none; }
+  .footer a:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+<div class="container">
+
+<pre class="art">
+    ____  ___       _____ ______________  ______
+   / __ \/   |     / ___// ____/_  __/ / / / __ \
+  / / / / /| |     \__ \/ __/   / / / / / / /_/ /
+ / /_/ / ___ |    ___/ / /___  / / / /_/ / ____/
+/_____/_/  |_|   /____/_____/ /_/  \____/_/
+</pre>
+
+<h1>DA SETUP</h1>
+<p class="subtitle">macOS setup by <a href="https://github.com/da-maltsev/da-setup" style="color:var(--blue);text-decoration:none;">da-maltsev</a></p>
+
+<div class="cmd-box">
+  <code id="cmd">curl -fsSL <span id="setup-url"></span> | bash</code>
+  <button id="copy-btn" onclick="copyCmd()">Copy</button>
+</div>
+
+<p class="section-title">What's inside</p>
+<ul class="grid">
+  <li>zsh + antidote + 5 plugins</li>
+  <li>Ghostty terminal</li>
+  <li>Neovim + LazyVim</li>
+  <li>Starship prompt</li>
+  <li>uv (Python)</li>
+  <li>Podman + Rosetta</li>
+  <li>Opencode CLI</li>
+  <li>Brave Browser</li>
+  <li>1Password + CLI</li>
+  <li>Telegram</li>
+  <li>Cursor IDE</li>
+  <li>fzf, ripgrep, bat, eza</li>
+  <li>btop, lazygit</li>
+  <li>fastfetch</li>
+  <li>JetBrains Mono Nerd Font</li>
+  <li>macOS defaults tuned</li>
+</ul>
+
+<p class="section-title">Aliases</p>
+<ul class="grid">
+  <li>ga, gp, gs — git</li>
+  <li>gc, gl, gco — git</li>
+  <li>gb, gr, gcod/gcom</li>
+  <li>leave_md — branch cleanup</li>
+  <li>dc — podman compose</li>
+  <li>docker — podman</li>
+  <li>lg — lazygit</li>
+  <li>ls, lsa, lt, lta — eza</li>
+  <li>n — nvim</li>
+  <li>vvv — source .venv</li>
+</ul>
+
+<div class="footer">
+  <p><a href="https://github.com/da-maltsev/da-setup">da-setup</a> &mdash; inspired by <a href="https://github.com/basecamp/omakub">Omakub</a></p>
+</div>
+
+</div>
+
+<script>
+function buildCmd() {
+  var url = window.location.origin + '/setup.sh';
+  document.getElementById('setup-url').textContent = url;
+}
+
+function copyCmd() {
+  var url = window.location.origin + '/setup.sh';
+  var cmd = 'curl -fsSL ' + url + ' | bash';
+  var btn = document.getElementById('copy-btn');
+  navigator.clipboard.writeText(cmd).then(function () {
+    btn.textContent = 'Copied!';
+    btn.classList.add('copied');
+    setTimeout(function () {
+      btn.textContent = 'Copy';
+      btn.classList.remove('copied');
+    }, 2000);
+  });
+}
+
+buildCmd();
+</script>
+</body>
+</html>

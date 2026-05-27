@@ -1,3 +1,3 @@
-curl -sS https://starship.rs/install.sh | sh
+curl -sS https://starship.rs/install.sh | sh -s -- -y
 
-cp ~/.local/share/da-files/themes/starship.toml ~/.config/starship.toml
+cp ~/.local/share/da-files/configs/starship.toml ~/.config/starship.toml

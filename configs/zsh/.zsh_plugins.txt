@@ -1,0 +1,5 @@
+zsh-users/zsh-autosuggestions
+zsh-users/zsh-completions
+Aloxaf/fzf-tab
+ohmyzsh/ohmyzsh path:plugins/colored-man-pages
+zsh-users/zsh-syntax-highlighting

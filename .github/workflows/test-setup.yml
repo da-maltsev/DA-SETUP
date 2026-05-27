@@ -1,0 +1,42 @@
+name: Test macOS setup
+on:
+  push:
+    branches: [master, macos]
+
+jobs:
+  syntax-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate all shell scripts
+        run: |
+          for f in $(find . -name "*.sh" -not -path "./.git/*"); do
+            bash -n "$f"
+          done
+
+
+  test-setup:
+    needs: syntax-check
+    runs-on: macos-14
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run full terminal setup
+        run: |
+          cp -R "$PWD" ~/.local/share/da-files
+          cd ~/.local/share/da-files
+          CI=true source install.sh
+      - name: Verify zsh config loads
+        run: |
+          zsh -c "source ~/.zshrc"
+      - name: Verify installed tools
+        run: |
+          missing=0
+          for tool in nvim uv starship lazygit fzf rg bat eza btop podman fastfetch; do
+            if which "$tool" &>/dev/null; then
+              echo "✅ $tool"
+            else
+              echo "❌ $tool"
+              missing=1
+            fi
+          done
+          [ "$missing" -eq 0 ]

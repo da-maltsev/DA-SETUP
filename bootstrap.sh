@@ -1,0 +1,33 @@
+#!/bin/bash
+set -e
+
+ascii_art='
+    ____  ___       _____ ______________  ______ 
+   / __ \/   |     / ___// ____/_  __/ / / / __ \
+  / / / / /| |     \__ \/ __/   / / / / / / /_/ /
+ / /_/ / ___ |    ___/ / /___  / / / /_/ / ____/ 
+/_____/_/  |_|   /____/_____/ /_/  \____/_/      
+'
+
+echo -e "$ascii_art"
+echo -e "\nBeginning macOS setup (or abort with ctrl+c)..."
+
+if [ "$(uname)" != "Darwin" ]; then
+  echo "This script is for macOS only."
+  exit 1
+fi
+
+if [ ! -d "$HOME/.local/share/da-files" ]; then
+  echo "Cloning da-setup..."
+  mkdir -p "$HOME/.local/share/da-files"
+  git clone --depth=1 https://github.com/da-maltsev/da-setup.git "$HOME/.local/share/da-files"
+fi
+
+if ! xcode-select -p &>/dev/null; then
+  echo "Installing Xcode Command Line Tools..."
+  xcode-select --install
+fi
+
+echo "Installation starting..."
+source ~/.local/share/da-files/install.sh
+echo "Installation finished. Restart your terminal to see all changes."
