@@ -2,7 +2,7 @@ set -e
 
 source ~/.local/share/da-files/install/terminal/homebrew.sh
 
-brew install fzf ripgrep bat eza btop tldr fastfetch neovim
+brew install fzf ripgrep bat eza btop fastfetch neovim
 
 source ~/.local/share/da-files/install/terminal/fonts.sh
 source ~/.local/share/da-files/install/terminal/ghostty.sh
