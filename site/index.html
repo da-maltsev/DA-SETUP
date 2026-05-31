@@ -147,7 +147,7 @@
 <p class="subtitle">macOS setup by <a href="https://github.com/da-maltsev/da-setup" style="color:var(--blue);text-decoration:none;">da-maltsev</a></p>
 
 <div class="cmd-box">
-  <code id="cmd">curl -fsSL <span id="setup-url"></span> | bash</code>
+  <code id="cmd"><span id="setup-url"></span></code>
   <button id="copy-btn" onclick="copyCmd()">Copy</button>
 </div>
 
@@ -158,7 +158,7 @@
   <li>Neovim + LazyVim</li>
   <li>Starship prompt</li>
   <li>uv (Python)</li>
-  <li>Podman + Rosetta</li>
+  <li>Podman</li>
   <li>Opencode CLI</li>
   <li>Brave Browser</li>
   <li>1Password + CLI</li>
@@ -193,13 +193,12 @@
 
 <script>
 function buildCmd() {
-  var url = window.location.origin + '/setup.sh';
-  document.getElementById('setup-url').textContent = url;
+  var cmd = 'git clone --depth=1 https://github.com/da-maltsev/da-setup.git ~/.local/share/da-files && ~/.local/share/da-files/bootstrap.sh';
+  document.getElementById('setup-url').textContent = cmd;
 }
 
 function copyCmd() {
-  var url = window.location.origin + '/setup.sh';
-  var cmd = 'curl -fsSL ' + url + ' | bash';
+  var cmd = 'git clone --depth=1 https://github.com/da-maltsev/da-setup.git ~/.local/share/da-files && ~/.local/share/da-files/bootstrap.sh';
   var btn = document.getElementById('copy-btn');
   navigator.clipboard.writeText(cmd).then(function () {
     btn.textContent = 'Copied!';
