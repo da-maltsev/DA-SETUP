@@ -1,30 +1,42 @@
-# DA SETUP
+# DA SHELL
 
-My macOS setup inspired by DHH's [Omakub](https://github.com/basecamp/omakub).
+My minimal WSL Ubuntu shell setup: zsh, plugins, aliases, history search, Starship, and Neovim.
 
-## One-command setup
+> The previous macOS version is preserved under the [`macos-legacy`](https://github.com/da-maltsev/da-setup/releases/tag/macos-legacy) tag.
+
+## One-command setup (inside WSL Ubuntu)
 
 ```bash
 git clone --depth=1 https://github.com/da-maltsev/da-setup.git ~/.local/share/da-files && ~/.local/share/da-files/bootstrap.sh
 ```
 
+Restart your terminal or run `exec zsh` afterwards.
+
 ## What's inside
 
-- **Shell**: zsh with aliases (git shortcuts, eza, nvim, podman, etc.)
-- **Terminal**: Ghostty with macOS-native keybindings and 75% opacity
-- **Editor**: Neovim with LazyVim, Catppuccin theme, Python extras
-- **Prompt**: Starship with Catppuccin Mocha theme
-- **Python**: uv package manager
-- **Container**: Podman with Rosetta for Apple Silicon
-- **CLI tools**: fzf, ripgrep, bat, eza, btop, tldr, lazygit, fastfetch
-- **Font**: JetBrains Mono Nerd Font
-- **Apps**: Brave Browser, 1Password (with CLI), Telegram, Cursor
-- **Other**: Opencode CLI
+- **Shell**: zsh with antidote plugin manager
+- **Plugins**: zsh-autosuggestions, zsh-completions, fzf-tab, colored-man-pages, zsh-syntax-highlighting
+- **History**: shared history, deduplication, ↑ / ↓ search
+- **Prompt**: Starship — `last-dir git-branch git-status venv ❯`
+- **Editor**: Neovim with LazyVim starter, Catppuccin theme, transparent background, Python extras
+- **CLI tools**: eza, fzf, ripgrep, bat, lazygit
 
-## macOS defaults applied
+## Windows font
 
-- Fast key repeat (no press-and-hold)
-- Tap to click and three finger drag
-- Show hidden files, path bar, and status bar in Finder
-- Screenshots saved to ~/Downloads
-- Expanded save/print dialogs by default
+For the best prompt / Neovim icon rendering, install JetBrains Mono Nerd Font on Windows:
+
+```powershell
+.\windows\install-font.ps1
+```
+
+Then select it in Windows Terminal settings.
+
+## Customizing
+
+Configs are symlinked from `~/.local/share/da-files/configs/`. Edit them there and restart zsh.
+
+## Going back to the macOS version
+
+```bash
+git clone --depth=1 --branch macos-legacy https://github.com/da-maltsev/da-setup.git
+```

@@ -1,4 +1,4 @@
-# Git with .git guard
+# Git helpers with .git guard
 function ga {
   if [ -d .git ]; then
     git add "$@"
@@ -50,19 +50,22 @@ function leave_md {
   fi
 }
 
-alias dc='podman compose'
-alias docker='podman'
+# Containers / tools
 alias lg='lazygit'
 
+# eza
 alias ls='eza --icons --group-directories-first'
 alias lsa='eza --icons --group-directories-first -a'
 alias lt='eza --tree --level=2 --long --icons --git'
 alias lta='eza --tree --level=2 --long --icons --git -a'
 
+# Editor
 alias n='nvim'
 
+# Navigation
+alias ..='cd ..'
+
+# Python venv
 function vvv {
   source .venv/bin/activate
 }
-
-

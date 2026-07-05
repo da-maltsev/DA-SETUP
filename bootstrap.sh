@@ -10,24 +10,21 @@ ascii_art='
 '
 
 echo -e "$ascii_art"
-echo -e "\nBeginning macOS setup (or abort with ctrl+c)..."
+echo -e "\nBeginning WSL Ubuntu shell setup (or abort with ctrl+c)..."
 
-if [ "$(uname)" != "Darwin" ]; then
-  echo "This script is for macOS only."
+if [ "$(uname -s)" != "Linux" ]; then
+  echo "This setup is intended for WSL Ubuntu. Aborting."
   exit 1
 fi
 
 if [ ! -d "$HOME/.local/share/da-files" ]; then
-  echo "Cloning da-setup..."
-  mkdir -p "$HOME/.local/share/da-files"
+  echo "Cloning da-files..."
+  mkdir -p "$HOME/.local/share"
   git clone --depth=1 https://github.com/da-maltsev/da-setup.git "$HOME/.local/share/da-files"
 fi
 
-if ! xcode-select -p &>/dev/null; then
-  echo "Installing Xcode Command Line Tools..."
-  xcode-select --install
-fi
+cd "$HOME/.local/share/da-files"
 
 echo "Installation starting..."
-source ~/.local/share/da-files/install.sh
-echo "Installation finished. Restart your terminal to see all changes."
+source "$HOME/.local/share/da-files/install.sh"
+echo "Installation finished. Restart your terminal or run 'exec zsh'."
