@@ -20,7 +20,7 @@ fi
 if [ ! -d "$HOME/.local/share/da-files" ]; then
   echo "Cloning da-files..."
   mkdir -p "$HOME/.local/share"
-  git clone --depth=1 https://github.com/da-maltsev/da-setup.git "$HOME/.local/share/da-files"
+  git clone --depth=1 git@github.com:da-maltsev/DA-SETUP.git "$HOME/.local/share/da-files"
 fi
 
 cd "$HOME/.local/share/da-files"

@@ -2,12 +2,12 @@
 
 My minimal WSL Ubuntu shell setup: zsh, plugins, aliases, history search, Starship, and Neovim.
 
-> The previous macOS version is preserved under the [`macos-legacy`](https://github.com/da-maltsev/da-setup/releases/tag/macos-legacy) tag.
+> The previous macOS version is preserved under the `macos-legacy` tag.
 
 ## One-command setup (inside WSL Ubuntu)
 
 ```bash
-git clone --depth=1 https://github.com/da-maltsev/da-setup.git ~/.local/share/da-files && ~/.local/share/da-files/bootstrap.sh
+git clone --depth=1 git@github.com:da-maltsev/DA-SETUP.git ~/.local/share/da-files && ~/.local/share/da-files/bootstrap.sh
 ```
 
 Restart your terminal or run `exec zsh` afterwards.
@@ -38,5 +38,5 @@ Configs are symlinked from `~/.local/share/da-files/configs/`. Edit them there a
 ## Going back to the macOS version
 
 ```bash
-git clone --depth=1 --branch macos-legacy https://github.com/da-maltsev/da-setup.git
+git clone --depth=1 --branch macos-legacy git@github.com:da-maltsev/DA-SETUP.git
 ```
